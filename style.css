@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+ 
+#all{
+	position:absolute;
+	z-index:1;
+	left:0px;
+	top:0%;
+	
+	}
+
+
+.link{
+	text-decoration:none;
+	color:#FFF;}
+
+
+.logo{	
+	margin-top:20px;
+	text-align:center;
+
+}
+
+.main{margin:0 auto;
+	text-align:center;
+	width:850px;
+
+ }
+
+#login_register{
+	width:700px;
+	height:500px;
+	background-color:#FFF;
+	position:absolute;
+	left:50%;
+	margin-left:-300px;
+	z-index:3;
+	display:none;
+	border:solid;
+	border-width:1px;
+	border-color:#06F;
+}
+.loginhead{
+
+	background-color:#06F;
+	height:150px;
+	text-align:left;
+}
+.loginheadtext{	
+	font-family:"微软雅黑";
+	color:#FFF;
+	font-size:40px;
+	position:absolute;
+	top:10px;
+	left:25px;
+	float:left;}
+
+.loginmain{
+	margin:0 auto;
+	width:600px;
+	margin-top:30px;}
+	
+.logintable{	
+	font-family:"微软雅黑";
+	text-align:center;
+	}
+.loginbutton{
+	font-family:"微软雅黑";
+	color:#FFF;
+	font-size:22px;
+	text-align:center;
+	height:20px;
+	margin-top:15px;
+}
+
+#register{
+	width:300px;
+	margin-left:300px;}
+	
+.registertext{
+	width:100px;
+	font-family:"微软雅黑";
+	text-align:right;}
+
+caption{
+	color:#000;
+	font-family:"微软雅黑";
+	font-size:30px;
+}
+	
+.closebutton{position:absolute;
+	top:60px;
+	right:10px;
+}
+.closebutton:hover{
+	background:#09F;
+	
+	
+}
+
+
+ul{text-align:right;
+	margin-right:20px;
+	}
+
+li{	text-align:right;
+	margin-top:20px;
+	color:#FFF;
+	width:50px;
+	display:inline;
+	font-family:"宋体";
+	font-size:16px;
+}
+.maintable{
+	position:absolute;
+	margin-top:20px;}
+	
+	
+	
+
+
+.table1{
+	border-spacing:20px;
+	margin-top:20px;
+
+	}
+
+.table2{
+	border-spacing:10px;
+	margin-top:10px;
+
+	}
+.tableinput{
+	border:none;
+	border-bottom:solid;
+	height:20px;
+	border-bottom-color:#06F;
+	border-bottom-width:1px;
+	font-family:"微软雅黑";
+	font-size:16px;
+	text-align:left;}
+.tableinput:hover{
+	background-color:#CCC;}
+	
+.buttonblue{
+	width:150px;
+	height:30px;
+	background-color:#06F;
+	border:none;
+	font-family:"微软雅黑";
+	font-size:20px;
+	border-radius:8px;
+	color:#FFF;
+	vertical-align:central;}
+.buttonblue:hover{background-color:#09F;
+cursor:pointer;}
+
+.buttonred{
+	width:150px;
+	height:30px;
+	background-color:#900;
+	border:none;
+	font-family:"微软雅黑";
+	font-size:20px;
+	border-radius:10px;
+	color:#FFF;
+	vertical-align:central;}
+.buttonred:hover{background-color:#C00;
+cursor:pointer;}
+	
+#mask{
+	filter:alpha(opacity=30);
+	-moz-opacity:0.3;
+	opacity:0.3;
+	background: #000;
+	position:absolute;
+	z-index:2;
+	margin:0 auto;
+	display:block;
+	}

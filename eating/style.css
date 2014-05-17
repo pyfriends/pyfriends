@@ -1,0 +1,292 @@
+@charset "utf-8";
+/* CSS Document */
+
+.headpic{
+	margin-top:50px;
+	text-align:center;
+	
+}
+
+.main{
+	margin:0 auto;
+	width:950px;}
+
+.leftcom{
+	float:left;
+	margin-top:0px;
+
+}
+
+.navigator{
+
+	font-family:"微软雅黑";
+	font-size:20px;
+	color:#FFF;
+	margin-top:40px;
+	width:200px;
+	height:700px;
+	text-align:left;
+	background-color:#06C;
+	padding-top:20px;
+}
+
+.navilist{
+	margin-top:20px;
+	list-style-type:disc;	
+}
+.navitext{
+	font-size:22px;
+	font-weight:100px;
+	margin-left:10px;
+}
+
+.notice{
+	margin-top:50px;
+	width:200px;
+	height:200px;
+	border:dashed;
+	border-color:#06C;
+
+}
+
+.maincontext{
+	margin-top:50px;
+	width:650px;
+	position:absolute;
+	margin-left:250px;
+	z-index:0;
+}
+	
+
+.top5{
+	height:250px;
+	border:dashed;
+	border-color:#06C;
+}
+.new{
+	margin-top:50px;
+	height:1200px;
+	border:solid;
+	border-color:#06F;
+	border-width:2px;
+	
+}
+
+.newtable{
+	text-align:center;
+	width:600px;
+	margin-left:20px;
+	margin-top:20px;
+	
+	
+	}
+.newtabletd{
+	text-align:left;
+	width:150px;
+	font-family:"微软雅黑";
+	vertical-align:bottom;
+	font-size:16px;
+	color:#000;
+	}
+
+.newtabletitle{
+	text-align:left;
+	vertical-align:bottom;
+	width:140px;
+	font-family:"微软雅黑";
+	font-size:20px;
+	color:#000;
+	font-weight:bold;
+	}
+	
+.time{ text-align:left;
+	vertical-align:bottom;
+	width:140px;
+	font-family:"微软雅黑";
+	font-size:14px;
+	color:#666;}
+	
+
+
+.slidebarnotice{width:200px;
+		  height:50px;
+		  background-color:#06C;
+		  margin-top:0px;
+}
+
+
+
+.slidebar{
+		  height:50px;
+		  background-color:#06C;
+		  margin-top:0px;
+}
+
+.slidebartext{
+	font-family:"微软雅黑";
+	font-size:24px;
+	font-weight:100px;
+	margin-top:0px;
+	margin-left:10px;
+	color:#FFF;
+	text-align:left;
+	padding-top:5px;
+
+}
+
+.addnewbutton{
+	margin-top:6px;
+	margin-right:10px;
+	float:right;
+	width:150px;
+	height:30px;
+	background-color:#06F;
+	border:solid;
+	border-width:2px;
+	text-align:center;
+	font-family:"微软雅黑";
+	font-size:22px;
+	border-radius:10px;
+	color:#FFF;
+	vertical-align:central;
+	}
+.addnewbutton:hover{
+	background-color:#09F;
+	cursor:pointer;}
+	
+#addnew{
+	width:600px;
+	background-color:#FFF;
+	position:absolute;
+	left:50%;
+	margin-left:-300px;
+	top:40%;
+	z-index:2;
+	border:solid;
+	border-color:#06F;
+	display:none;
+	}
+
+#details{
+	width:650px;
+	background-color:#FFF;
+	position:absolute;
+	left:50%;
+	margin-left:-300px;
+	top:40%;
+	z-index:2;
+	border:solid;
+	border-color:#06F;
+	display:none;
+	}
+#participate{
+	width:500px;
+	background-color:#FFF;
+	position:absolute;
+	left:50%;
+	margin-left:-250px;
+	top:60%;
+	z-index:3;
+	border:solid;
+	border-color:#06F;
+	display:none;
+	}
+	
+	
+.detailstable{
+	margin-left:30px;
+	margin-top:30px;
+	width:600px;
+	padding-bottom:50px;}
+.participatetable{
+	margin-left:30px;
+	margin-top:30px;
+	width:600px;
+	padding-bottom:50px;}
+	
+.ptabletext{font-family:"微软雅黑";
+	font-size:19px;
+	text-align:right;
+	width:150px;
+	}
+	
+.detailstabletd{
+	text-align:left;
+	width:150px;
+	font-family:"微软雅黑";
+	vertical-align:top;
+	font-size:18px;
+	color:#000;
+
+	}
+.head{
+	height:60px;
+	background:#06C;
+	}
+.headtext{
+	
+	font-family:"微软雅黑";
+	color:#FFF;
+	font-size:28px;
+	padding-left:30px;
+	margin-top:0px;
+	padding-top:10px;
+	float:left;}
+	
+
+.addnewtable{
+	margin-left:10px;
+	margin-top:30px;
+	padding-bottom:50px;}
+.tabletext{font-family:"微软雅黑";
+	font-size:19px;
+	text-align:right;
+	width:200px;
+	}
+.tableinput{
+	border:solid;
+	height:20px;
+	border-color:#06F;
+	border-width:1px;
+	font-family:"微软雅黑";
+	}
+.tableinput:hover{ border-color:#C03;}
+	
+.closebutton{position:absolute;
+	top:10px;
+	right:10px;}
+.closebutton:hover{background-color:#09F;
+}
+
+.buttonblue{
+	width:200px;
+	height:40px;
+	background-color:#06F;
+	border:none;
+	font-family:"微软雅黑";
+	font-size:24px;
+	text-align:center;
+	border-radius:10px;
+	color:#FFF;
+	vertical-align:central;}
+.buttonblue:hover{background-color:#09F;
+cursor:pointer;}
+
+.buttonred{
+	width:200px;
+	height:40px;
+	background-color:#900;
+	border:none;
+	text-align:center;
+	font-family:"微软雅黑";
+	font-size:24px;
+	border-radius:10px;
+	color:#FFF;
+	vertical-align:central;}
+.buttonred:hover{background-color:#C00;
+cursor:pointer;}
+
+textarea{	border:solid;
+	border-width:1px;
+	border-color:#06F;}
+	textarea:hover{border-color:#C03;}
