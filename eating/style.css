@@ -1,6 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
+#all{
 
+	z-index:0;
+	left:0px;
+	top:0%;
+	
+	}
 .headpic{
 	margin-top:50px;
 	text-align:center;
@@ -28,6 +34,7 @@
 	text-align:left;
 	background-color:#06C;
 	padding-top:20px;
+	border-radius:15px;
 }
 
 .navilist{
@@ -44,8 +51,9 @@
 	margin-top:50px;
 	width:200px;
 	height:200px;
-	border:dashed;
+	border:solid;
 	border-color:#06C;
+	border-width:2px;
 
 }
 
@@ -60,8 +68,9 @@
 
 .top5{
 	height:250px;
-	border:dashed;
+	border:solid;
 	border-color:#06C;
+	border-width:2px;
 }
 .new{
 	margin-top:50px;
@@ -134,7 +143,7 @@
 
 }
 
-.addnewbutton{
+#addnewbutton{
 	margin-top:6px;
 	margin-right:10px;
 	float:right;
@@ -150,7 +159,7 @@
 	color:#FFF;
 	vertical-align:central;
 	}
-.addnewbutton:hover{
+#addnewbutton:hover{
 	background-color:#09F;
 	cursor:pointer;}
 	
@@ -160,7 +169,6 @@
 	position:absolute;
 	left:50%;
 	margin-left:-300px;
-	top:40%;
 	z-index:2;
 	border:solid;
 	border-color:#06F;
@@ -173,19 +181,23 @@
 	position:absolute;
 	left:50%;
 	margin-left:-300px;
-	top:40%;
 	z-index:2;
 	border:solid;
 	border-color:#06F;
 	display:none;
 	}
+#showdetails{
+	color:#00F;
+	text-decoration:underline;
+}
+#showdetails:hover{
+	cursor:pointer;}
 #participate{
 	width:500px;
 	background-color:#FFF;
 	position:absolute;
 	left:50%;
 	margin-left:-250px;
-	top:60%;
 	z-index:3;
 	border:solid;
 	border-color:#06F;
@@ -249,7 +261,11 @@
 	border-color:#06F;
 	border-width:1px;
 	font-family:"微软雅黑";
+	font-size:17px;
+	vertical-align:middle;
+	padding:3px;
 	}
+
 .tableinput:hover{ border-color:#C03;}
 	
 .closebutton{position:absolute;
@@ -288,5 +304,17 @@ cursor:pointer;}
 
 textarea{	border:solid;
 	border-width:1px;
-	border-color:#06F;}
+	border-color:#06F;
+	font-family:"微软雅黑";
+	font-size:17px;}
 	textarea:hover{border-color:#C03;}
+#mask{
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+	background: #000;
+	position:absolute;
+	z-index:1;
+	margin:0 auto;
+	display:none;
+	}

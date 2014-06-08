@@ -4,30 +4,46 @@
 
  
 #all{
-	position:absolute;
-	z-index:1;
+
+	z-index:0;
 	left:0px;
 	top:0%;
 	
 	}
 
 
-.link{
+#reg_log{
 	text-decoration:none;
 	color:#FFF;}
+#reg_log:hover{
+	cursor:pointer;}
 
 
 .logo{	
 	margin-top:20px;
 	text-align:center;
+	z-index:0;
 
 }
+.featuretd{
+	width:240px;
+	height:160px;
+	border-radius:10px;}
 
 .main{margin:0 auto;
 	text-align:center;
 	width:850px;
+	z-index:0;
 
  }
+.hotpic{
+	z-index:0;}
+.picmask{
+	z-index: 1;
+	position: absolute;
+	margin-left:0px;
+	display:none;
+}
 
 #login_register{
 	width:700px;
@@ -42,6 +58,7 @@
 	border-width:1px;
 	border-color:#06F;
 }
+
 .loginhead{
 
 	background-color:#06F;
@@ -90,11 +107,11 @@ caption{
 	font-size:30px;
 }
 	
-.closebutton{position:absolute;
+#closebutton{position:absolute;
 	top:60px;
-	right:10px;
+	right:30px;
 }
-.closebutton:hover{
+#closebutton:hover{
 	background:#09F;
 	
 	
@@ -103,6 +120,7 @@ caption{
 
 ul{text-align:right;
 	margin-right:20px;
+	z-index:0;
 	}
 
 li{	text-align:right;
@@ -171,12 +189,12 @@ cursor:pointer;}
 cursor:pointer;}
 	
 #mask{
-	filter:alpha(opacity=30);
-	-moz-opacity:0.3;
-	opacity:0.3;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
 	background: #000;
 	position:absolute;
 	z-index:2;
 	margin:0 auto;
-	display:block;
+	display:none;
 	}

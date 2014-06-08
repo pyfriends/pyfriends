@@ -4,15 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>吃喝七里台</title>
 
-<link href="style.css" type="text/css" rel="stylesheet"/>
-<script src="main.js" language="javascript"></script>
+<link href="./style.css" type="text/css" rel="stylesheet"/>
+<script src="../jquery-1.11.1.js" language="javascript"></script>
+<script src="./main.js" language="javascript"></script>
 
 
 </head>
 
 <body>
-
-<div class="headpic"><img src="eating.png"></div>
+<div id="all">
+<div class="headpic"><img src="./eating.png"></div>
 
 <div class="main">
 <div class="leftcom">
@@ -72,7 +73,7 @@
 <div class="new">
 <div class="slidebar">
 <p class="slidebartext" style="float:left">最新活动</p>
-<input type="text" value="发起新活动" class="addnewbutton" onclick="showdiv('addnew')" />
+<input type="text" value="发起新活动" id="addnewbutton"/>
 </div>
 
 
@@ -88,7 +89,7 @@
 <td  class="newtabletd" >赞：</td>
 <td  class="newtabletd" >参加人数：</td>
 <td  class="newtabletd" ></td>
-<td  class="newtabletd" ><a href="javascript:void(0)" onclick="showdiv('details')">活动详情...</a></td>
+<td  class="newtabletd" id="showdetails"> 活动详情...</td>
 </tr>
 
 <tr>
@@ -100,76 +101,74 @@
 
 </div>
 </div>
-
-
-
-
 </div>
+</div>
+
 
 <form action="#" name="newactivity" method="post">
 
 <div id="addnew">
 <div class="head"><p class="headtext">发起新活动</p>
-<input type="image" src="closebutton.png" class="closebutton" onclick="hidediv('addnew')" /></div>
+<input type="image" src="closebutton.png" name="close_addnew" class="closebutton"  /></div>
 <table cellspacing="10" class="addnewtable">
 <tr>
-<td class="tabletext">活动名称：</td>
-<td colspan="5"><input type="text" size="30" name="activity_nname" class="tableinput" />&nbsp;&nbsp;
+<td class="tabletext" nowrap="nowrap" >活动名称：</td>
+<td colspan="5" nowrap="nowrap"><input type="text" size="30" name="activity_nname"  placeholder="不多于20字"class="tableinput" />&nbsp;&nbsp;
 </td>
 </tr>
 <tr>
-<td class="tabletext">活动发起人：</td>
-<td colspan="5"><input type="text" size="10" name="organizer" class="tableinput" />
-</td>
-</tr>
-
-<tr>
-<td class="tabletext">联系方式：<br /><small><small>（电话，QQ，微信，邮箱等）</small></small></td>
-<td colspan="5"><input type="text" size="50"  maxlength="100" name="contact"  class="tableinput" />
+<td class="tabletext" nowrap="nowrap">活动发起人：</td>
+<td colspan="5" nowrap="nowrap"><input type="text" size="10" name="organizer" class="tableinput" />
 </td>
 </tr>
 
 <tr>
-<td class="tabletext">活动类别：</td>
-<td colspan="5"><input type="text" size="20"  maxlength="100" name="activity_class"  class="tableinput" />
+<td class="tabletext" nowrap="nowrap">联系方式：</td>
+<td colspan="5" nowrap="nowrap"><input type="text" size="30"  maxlength="100" name="contact" placeholder="电话，QQ，微信，邮箱等"  class="tableinput" />
 </td>
 </tr>
 
 <tr>
-<td class="tabletext">活动摘要：</td>
-<td colspan="5"><input type="text" size="50"  maxlength="100" name="activity_abstract"  class="tableinput" />
-</td>
-</tr>
-<tr>
-<td class="tabletext">活动地点：</td>
-<td colspan="5"><input type="text" size="25"  maxlength="50" name="activity_place"  class="tableinput" />
+<td class="tabletext" nowrap="nowrap">活动类别：</td>
+<td colspan="5" nowrap="nowrap"><input type="text" size="20" placeholder="描述活动类别" maxlength="100" name="activity_class"  class="tableinput" />
 </td>
 </tr>
 
 <tr>
-<td class="tabletext">活动开始时间：<br /><small>(2014-05-09 08:30)</small></td>
-<td colspan="5"><input type="text" size="4" maxlength="4" name="startyear"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="startmonth"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="startday"  class="tableinput" />&nbsp;&nbsp;<input type="text" size="2" maxlength="2" name="starthour"  class="tableinput" />:<input type="text" size="2" maxlength="2" name="startminute"  class="tableinput" />
+<td class="tabletext" nowrap="nowrap">活动摘要：</td>
+<td colspan="5" nowrap="nowrap"><input type="text" size="30"  maxlength="100" name="activity_abstract" placeholder="一句话概括您的活动（可选）" class="tableinput" />
+</td>
+</tr>
+<tr>
+<td class="tabletext" nowrap="nowrap">活动地点：</td>
+<td colspan="5" nowrap="nowrap"><input type="text" size="20"  maxlength="50" name="activity_place" placeholder="描述您的活动地点" class="tableinput" />
 </td>
 </tr>
 
 <tr>
-<td class="tabletext">活动结束时间：</td>
-<td colspan="5"><input type="text" size="4" maxlength="4" name="endtyear"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="endmonth"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="endday"  class="tableinput" />&nbsp;&nbsp;<input type="text" size="2" maxlength="2" name="endhour"  class="tableinput" />:<input type="text" size="2" maxlength="2" name="endminute"  class="tableinput" />
+<td class="tabletext" nowrap="nowrap">活动开始时间：<br /><small>(2014-05-09 08:30)</small></td>
+<td colspan="5" nowrap="nowrap"><input type="text" size="4" maxlength="4" name="startyear"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="startmonth"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="startday"  class="tableinput" />&nbsp;&nbsp;<input type="text" size="2" maxlength="2" name="starthour"  class="tableinput" />:<input type="text" size="2" maxlength="2" name="startminute"  class="tableinput" />
 </td>
 </tr>
 
 <tr>
-<td class="tabletext">活动参与人数：</td>
+<td class="tabletext" nowrap="nowrap">活动结束时间：</td>
+<td colspan="5" nowrap="nowrap"><input type="text" size="4" maxlength="4" name="endtyear"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="endmonth"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="endday"  class="tableinput" />&nbsp;&nbsp;<input type="text" size="2" maxlength="2" name="endhour"  class="tableinput" />:<input type="text" size="2" maxlength="2" name="endminute"  class="tableinput" />
+</td>
+</tr>
+
+<tr>
+<td class="tabletext" nowrap="nowrap">活动参与人数：</td>
 <td colspan="2" ><input type="text" size="4"  maxlength="100" name="number"  class="tableinput" />
 </td>
-<td colspan="3"  class="tabletext" style="text-align:left">参与人范围：
-<input type="text" size="15"  maxlength="100" name="number"  class="tableinput" style="text-align:left" />
+<td colspan="3"  class="tabletext" style="text-align:left" nowrap="nowrap">参与人范围：
+<input type="text" size="5"  maxlength="100" name="number"  class="tableinput" style="text-align:left" />
 </td>
 </tr>
 
 <tr>
-<td class="tabletext" style="vertical-align:top">活动详细介绍：</td>
-<td colspan="5" ><textarea cols="50" rows="15"  name="detais"></textarea>
+<td class="tabletext" style="vertical-align:top" nowrap="nowrap">活动详细介绍：</td>
+<td colspan="5" nowrap="nowrap" ><textarea cols="35" rows="10"  name="detais" placeholder="详细描述您的活动"  ></textarea>
 </td>
 </tr>
 
@@ -177,7 +176,7 @@
 <td colspan="6" style="text-align:center"><input type="submit" name="goactivity" value="发起活动" class="buttonblue"></td>
 </tr>
 <tr>
-<td colspan="6" style="text-align:center"><input type="text" value="取消" class="buttonred" onclick="hidediv('addnew')" /></td>
+<td colspan="6" style="text-align:center"><input type="text" value="取消" name="cancel_addnew" class="buttonred" /></td>
 </tr>
 </table>
 
@@ -187,65 +186,52 @@
 
 <div id="details">
 <div class="head"><p class="headtext">活动详情</p>
-<input type="image" src="closebutton.png" class="closebutton" onclick="hidediv('details')" /></div>
+<input type="image" src="closebutton.png" id="closedetails" class="closebutton"  /></div>
 <table cellspacing="10" class="detailstable">
 <tr>
-<td colspan="3" class="newtabletitle">这是一个很长很很长长的标题，必须得写满20字</td>
-<td  colspan="1" class="time" >2014.5.14 15:23</td>
+<td colspan="3" class="newtabletitle" nowrap="nowrap">这是一个很长很很长长的标题，必须得写满20字</td>
+<td  colspan="1" class="time" nowrap="nowrap" >2014.5.14 15:23</td>
 </tr>
 <tr>
-<td colspan="2" class="detailstabletd">活动发起人：</td>
-<td colspan="2" class="detailstabletd" >联系方式:</td>
+<td colspan="2" class="detailstabletd" nowrap="nowrap">活动发起人：</td>
+<td colspan="2" class="detailstabletd" nowrap="nowrap" >联系方式:</td>
 </tr>
 <tr>
-<td colspan="2" class="detailstabletd">活动类别：</td>
-<td colspan="2" class="detailstabletd" >活动地点:</td>
+<td colspan="2" class="detailstabletd" nowrap="nowrap">活动类别：</td>
+<td colspan="2" class="detailstabletd" nowrap="nowrap" >活动地点:</td>
 </tr>
 <tr>
-<td colspan="2" class="detailstabletd">开始时间：</td>
-<td colspan="2" class="detailstabletd" >结束时间:</td>
+<td colspan="2" class="detailstabletd" nowrap="nowrap">开始时间：</td>
+<td colspan="2" class="detailstabletd" nowrap="nowrap" >结束时间:</td>
 </tr>
 
 <tr>
-<td colspan="2" class="detailstabletd">参与人数：</td>
-<td colspan="2" class="detailstabletd">参与人范围：</td>
+<td colspan="2" class="detailstabletd" nowrap="nowrap">参与人数：</td>
+<td colspan="2" class="detailstabletd" nowrap="nowrap">参与人范围：</td>
 </tr>
 <tr>
-<td colspan="4" class="detailstabletd">活动详情：</td>
+<td colspan="4" class="detailstabletd" nowrap="nowrap">活动详情：</td>
 </tr>
 
 <tr>
-<td class="detailstabletd"></td>
-<td class="detailstabletd">赞：</td>
-<td class="detailstabletd">参加人数：</td>
-<td class="detailstabletd"></td>
+<td class="detailstabletd" nowrap="nowrap"></td>
+<td class="detailstabletd" nowrap="nowrap">赞：</td>
+<td class="detailstabletd" nowrap="nowrap">参加人数：</td>
+<td class="detailstabletd" nowrap="nowrap"></td>
 </tr>
 
 <tr>
-<td class="detailstabletd"></td>
-<td colspan="2" class="detailstabletd" style="text-align:center"><input type="text" value="我要参加" class="buttonblue" onclick="showdiv('participate')" /></td>
-<td class="detailstabletd"></td>
+<td class="detailstabletd" nowrap="nowrap"></td>
+<td colspan="2" class="detailstabletd" style="text-align:center" nowrap="nowrap"><input type="text" value="我要参加" class="buttonblue" id="wein"/></td>
+<td class="detailstabletd" nowrap="nowrap"></td>
 </tr>
 
 <tr>
-<td class="detailstabletd"></td>
-<td colspan="2" class="detailstabletd" style="text-align:center"><input type="text" value="取消" class="buttonred"  onclick="hidediv('details')"/></td>
-<td class="detailstabletd"></td>
+<td class="detailstabletd" nowrap="nowrap"></td>
+<td colspan="2" class="detailstabletd" style="text-align:center" nowrap="nowrap"><input type="text" value="取消" class="buttonred" id="cancel_details"/></td>
+<td class="detailstabletd" nowrap="nowrap"></td>
 </tr>
 
-<tr>
-<td colspan="4" class="detailstabletd"><hr /></td>
-</tr>
-<tr>
-<td colspan="2" class="detailstabletd">参加人1：</td>
-<td colspan="2" class="detailstabletd">联系方式：</td>
-</tr>
-<td colspan="2" class="detailstabletd">参加时间：</td>
-<td colspan="2" class="detailstabletd">备注：</td>
-</tr>
-<tr>
-<td colspan="4" class="detailstabletd"><hr /></td>
-</tr>
 
 
 </table>
@@ -256,32 +242,32 @@
 <div id="participate">
 <form action="#" name="participant" method="post">
 <div class="head"><p class="headtext">我要参加</p>
-<input type="image" src="closebutton.png" class="closebutton" onclick="hidediv('participate')" /></div>
+<input type="image" src="closebutton.png" class="closebutton" id="close_participate"/></div>
 <table cellspacing="10" class="participatetable">
 <tr>
-<td class="ptabletext">称呼：</td>
-<td><input type="text" size="20"  maxlength="30" name="p_name"  class="tableinput" /></td>
+<td class="ptabletext" nowrap="nowrap">称呼：</td>
+<td nowrap="nowrap"><input type="text" size="10"  maxlength="20" name="p_name"  class="tableinput" /></td>
 </tr>
 <tr>
-<td class="ptabletext">联系方式：</td>
-<td><input type="text" size="35"  maxlength="30" name="p_contact"  class="tableinput" /></td>
+<td class="ptabletext" nowrap="nowrap">联系方式：</td>
+<td nowrap="nowrap"><input type="text" size="20"  maxlength="30" name="p_contact"  class="tableinput" /></td>
 </tr>
 <tr>
-<td class="ptabletext">参与活动时间：</td>
-<td><input type="text" size="35"  maxlength="30" name="p_time"  class="tableinput" /></td>
+<td class="ptabletext" nowrap="nowrap">参与活动时间：</td>
+<td nowrap="nowrap"><input type="text" size="20"  maxlength="30" name="p_time"  class="tableinput" /></td>
 </tr>
 <tr>
-<td class="ptabletext">备注：</td>
-<td><input type="text" size="35"  maxlength="30" name="p_others"  class="tableinput" /></td>
+<td class="ptabletext" nowrap="nowrap">备注：</td>
+<td nowrap="nowrap"><input type="text" size="30"  maxlength="30" name="p_others"  class="tableinput" /></td>
 </tr>
 <tr>
-<td colspan="2" ><input type="submit" name="iparticipate" value="参加" class="buttonblue" style="margin-left:120px;"/></td>
+<td colspan="2" nowrap="nowrap" ><input type="submit" name="iparticipate" value="参加" class="buttonblue" style="margin-left:120px;"/></td>
 </tr>
 
 </table>
 </form>
 </div>
-
+<div id="mask"></div>
 
 </body>
 </html>
