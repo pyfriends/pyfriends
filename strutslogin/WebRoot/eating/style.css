@@ -261,11 +261,7 @@
 	border-color:#06F;
 	border-width:1px;
 	font-family:"微软雅黑";
-	font-size:17px;
-	vertical-align:middle;
-	padding:3px;
 	}
-
 .tableinput:hover{ border-color:#C03;}
 	
 .closebutton{position:absolute;
@@ -304,9 +300,7 @@ cursor:pointer;}
 
 textarea{	border:solid;
 	border-width:1px;
-	border-color:#06F;
-	font-family:"微软雅黑";
-	font-size:17px;}
+	border-color:#06F;}
 	textarea:hover{border-color:#C03;}
 #mask{
 	filter:alpha(opacity=50);

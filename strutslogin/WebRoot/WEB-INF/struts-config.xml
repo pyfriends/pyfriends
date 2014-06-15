@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+
+	<!-- 配置表单 -->
+	<form-beans>
+	<!-- name是表单名字，原则上可以自由定义，但是建议取名规范，表单类名小写即可 -->
+	<!-- type用于指定表单类的全路径 -->
+	<form-bean name="userform" type="com.hsp.forms.UserForm"/>
+	</form-beans>
+	
+	<!-- 配置action（小队长） -->
+	<action-mappings>
+	<!-- 配置具体的小队长 path表示将来访问action的URI -->
+	<!-- name用于关联某个表单 ,type用来指定该action的全路径 scope表示这个表单对象的生命周期
+		相当于request.setAttribute("userform",userForm)
+	-->
+		<action path="/login" name="userform" scope="request" type="com.hsp.actions.LoginAction">
+	<!-- 这里配置跳转关系 -->	
+	<!-- name表示结果名称，path转发页面 -->
+		<forward name="ok" path="/WEB-INF/home.jsp"/>
+		<forward name="err" path="/WEB-INF/login_err.jsp"/>
+		<forward name="reg" path="/WEB-INF/home.jsp"/>
+		<forward name="reg_err" path="/WEB-INF/reg_err.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>
