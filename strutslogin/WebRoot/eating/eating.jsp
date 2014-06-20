@@ -1,3 +1,6 @@
+
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -5,7 +8,7 @@
 <title>吃喝七里台</title>
 
 <link href="./style.css" type="text/css" rel="stylesheet"/>
-<script src="../jquery-1.11.1.js" language="javascript"></script>
+<script src="../js/jquery-1.11.1.js" language="javascript"></script>
 <script src="./main.js" language="javascript"></script>
 
 
@@ -105,7 +108,7 @@
 </div>
 
 
-<form action="#" name="newactivity" method="post">
+<form action="/new-activity.do" name="newactivity" method="post">
 
 <div id="addnew">
 <div class="head"><p class="headtext">发起新活动</p>
