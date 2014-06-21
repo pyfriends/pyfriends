@@ -2,29 +2,6 @@
 
 
 ///placeholder插件/
-(function ($) {
-    $.fn.extend({
-        placeholder : function () {
-            if ("placeholder" in document.createElement("input")) {
-                return this //如果原生支持placeholder属性，则返回对象本身
-            } else {
-
-                return this.each(function () {				
-                    var _this = $(this);
-                    _this.val(_this.attr("placeholder")).focus(function () {
-                        if (_this.val() === _this.attr("placeholder")) {
-                            _this.val("")
-                        }
-                    }).blur(function () {
-                        if (_this.val().length === 0) {
-                            _this.val(_this.attr("placeholder"))
-                        }
-                    })
-                })
-            }
-        }
-    })
-})(jQuery);
 
 
 
@@ -52,19 +29,56 @@ $(document).ready(function(){
 		function(){
 		$('#hotmask').fadeIn(500);
 		},function(){$('#hotmask').fadeOut(500);	})
-		
-$('input[placeholder][type=text]').placeholder();
-	
 
-		
-			
 	
 		
-			
-			
-			
-	
-	
+		 $("#registerform").validate({
+
+		        rules: {
+		   	registermail: {
+		    required: true,
+		    email: true
+		   },
+		   registerpassword: {
+			   required: function(){
+			    	if($("#registerpassword").attr("value")==null)
+			    		{return false;}
+			    	else return true;
+			    		},
+		    rangelength:[6,12]
+		   },
+		   repeatpassword: {
+		    required: function(){
+		    	if($("#repeatpassword").attr("value")==null)
+	    		{return false;}
+	    	else return true;
+	    		},
+		    equalTo: "#registerpassword"
+		   }
+		  },
+		        messages: {
+		    registermail: {
+		    required: "",
+		    email: "请输入正确的邮箱"
+		   },
+		   registerpassword: {
+		    required: "",
+		    rangelength: "密码长度为6-12位"
+		   },
+		   repeatpassword: {
+		    required: "",
+		    equalTo: "两次密码不相符"
+		   }
+		  },
+		  
+		  errorPlacement: function(error, element) {  
+			  error.appendTo(element.parent());
+			}
+		  
+		    });
+		
+
+
 	
 	})
 
