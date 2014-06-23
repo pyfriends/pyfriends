@@ -30,19 +30,22 @@
 	height:160px;
 	border-radius:10px;}
 
+
 .main{margin:0 auto;
 	text-align:center;
 	width:850px;
 	z-index:0;
 
  }
-.hotpic{
-	z-index:0;}
+.pic{
+	z-index:0;
+	border:0px;}
 .picmask{
 	z-index: 1;
 	position: absolute;
 	margin-left:0px;
 	display:none;
+	border:0px;
 }
 
 #login_register{
@@ -73,16 +76,18 @@
 	top:10px;
 	left:25px;
 	float:left;}
+#loginmain{
+	display:inline;
+}
 
-.loginmain{
-	margin:0 auto;
-	width:600px;
-	margin-top:30px;}
+
+#login{
+	width:300px;
+	margin-left:20px;
+	margin-top:30px;
+	float:left;
+}
 	
-.logintable{	
-	font-family:"微软雅黑";
-	text-align:center;
-	}
 .loginbutton{
 	font-family:"微软雅黑";
 	color:#FFF;
@@ -94,22 +99,28 @@
 
 #register{
 	width:300px;
-	margin-left:300px;}
+	margin-left:350px;
+	margin-top:30px;
+	}
 	
 .registertext{
 	width:100px;
 	font-family:"微软雅黑";
 	text-align:right;}
 
-caption{
+.formhead{
 	color:#000;
 	font-family:"微软雅黑";
 	font-size:30px;
+	text-align:center;
 }
+
+
 	
 #closebutton{position:absolute;
 	top:60px;
 	right:30px;
+	cursor:pointer;
 }
 #closebutton:hover{
 	background:#09F;
@@ -137,7 +148,19 @@ li{	text-align:right;
 	
 	
 	
+.formdiv{
+	padding-top:5px;
+	margin-left:10px;
+	font-family:"微软雅黑";
+	font-size:16px;
 
+}
+
+.formbutton{
+	text-align:center;
+	padding:0px;
+	
+}
 
 .table1{
 	border-spacing:20px;
@@ -197,4 +220,15 @@ cursor:pointer;}
 	z-index:2;
 	margin:0 auto;
 	display:none;
-	}
+}
+input.error {border:none;
+	border-bottom:solid;
+	border-bottom-width:1px;
+	background-color:#C00;}
+label.error {
+  padding-left: 100px;
+  padding-bottom: 2px;
+  font-family:"微软雅黑";
+  font-size:10px;
+  color: #C00;
+}

@@ -48,7 +48,7 @@
   </tr>
 
 </table>
-`
+
 <table  align="center" class="table2" >
 
 <tr>
@@ -91,7 +91,7 @@
 
 <div class="loginmain">
 <table cellspacing="10px" style="float:left">
-<caption>登陆</caption>
+<caption>登录</caption>
 <tr>
 <td colspan="2" nowrap="nowrap"><img src="/strutslogin/pic/username.png" /><input type="email" name="useremail" placeholder="  输入注册邮箱" size="25" class="tableinput"/> </td>
 </tr>
@@ -121,7 +121,7 @@
 </tr>
 
 <tr>
-<td class="registertext" nowrap="nowrap">密码：</td><td><input type="registerpassword" name="password" size="20" class="tableinput" placeholder="输入密码"/></td>
+<td class="registertext" nowrap="nowrap">密码：</td><td><input type="password" name="registerpassword" size="20" class="tableinput" placeholder="输入密码"/></td>
 </tr>
 
 <tr>
