@@ -108,7 +108,7 @@
 </div>
 
 
-<form action="/new-activity.do" name="newactivity" method="post">
+<form action="/strutslogin/new-activity.do" name="newactivity" method="post">
 
 <div id="addnew">
 <div class="head"><p class="headtext">发起新活动</p>
@@ -116,7 +116,7 @@
 <table cellspacing="10" class="addnewtable">
 <tr>
 <td class="tabletext">活动名称：</td>
-<td colspan="5"><input type="text" size="30" name="activity_nname" class="tableinput" />&nbsp;&nbsp;
+<td colspan="5"><input type="text" size="30" name="activity_name" class="tableinput" />&nbsp;&nbsp;
 </td>
 </tr>
 <tr>
@@ -133,7 +133,18 @@
 
 <tr>
 <td class="tabletext">活动类别：</td>
-<td colspan="5"><input type="text" size="20"  maxlength="100" name="activity_class"  class="tableinput" />
+<!--  <td colspan="5"><input type="text" size="20"  maxlength="100" name="activity_class"  class="tableinput" /> -->
+<td colspan="5">
+<select name="activity_class"  class="tableinput">
+<option value="eating">吃喝七里台</option>
+<option value="travel">从北洋出发</option>
+<option value="art">北洋文艺苑</option>
+<option value="sport">激情运动场</option>
+<option value="book">我要换书</option>
+<option value="game">逸游北洋</option>
+<option value="learning">学霸去哪儿了</option>
+<option value="other">杂七杂八</option>
+</select>
 </td>
 </tr>
 
@@ -156,22 +167,26 @@
 
 <tr>
 <td class="tabletext">活动结束时间：</td>
-<td colspan="5"><input type="text" size="4" maxlength="4" name="endtyear"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="endmonth"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="endday"  class="tableinput" />&nbsp;&nbsp;<input type="text" size="2" maxlength="2" name="endhour"  class="tableinput" />:<input type="text" size="2" maxlength="2" name="endminute"  class="tableinput" />
+<td colspan="5"><input type="text" size="4" maxlength="4" name="endyear"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="endmonth"  class="tableinput" />-<input type="text" size="2" maxlength="2" name="endday"  class="tableinput" />&nbsp;&nbsp;<input type="text" size="2" maxlength="2" name="endhour"  class="tableinput" />:<input type="text" size="2" maxlength="2" name="endminute"  class="tableinput" />
 </td>
 </tr>
 
 <tr>
 <td class="tabletext">活动参与人数：</td>
-<td colspan="2" ><input type="text" size="4"  maxlength="100" name="number"  class="tableinput" />
+<td colspan="2" ><input type="text" size="4"  maxlength="100" name="maxnumber"  class="tableinput" />
 </td>
 <td colspan="3"  class="tabletext" style="text-align:left">参与人范围：
-<input type="text" size="15"  maxlength="100" name="number"  class="tableinput" style="text-align:left" />
+<!-- <input type="text" size="15"  maxlength="100" name="range"  class="tableinput" style="text-align:left" />  -->
+<select name="range">
+  <option value="student">学生</option>
+  <option value="anyone">任意</option>
+</select>
 </td>
 </tr>
 
 <tr>
 <td class="tabletext" style="vertical-align:top">活动详细介绍：</td>
-<td colspan="5" ><textarea cols="50" rows="15"  name="detais"></textarea>
+<td colspan="5" ><textarea cols="50" rows="15"  name="detail"></textarea>
 </td>
 </tr>
 

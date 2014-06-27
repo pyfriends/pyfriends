@@ -54,7 +54,7 @@
 <table  align="center" class="table2" >
 
 <tr>
-	<td   nowrap="nowrap"><a href="eating/eating.html" ><img src="/strutslogin/pic/eating.gif" class="pic" /></a>
+	<td   nowrap="nowrap"><a href="eating/eating.jsp" ><img src="/strutslogin/pic/eating.gif" class="pic" /></a>
   </td>
   	<td   nowrap="nowrap"><img src="/strutslogin/pic/outdoor.gif"/>
   </td>
