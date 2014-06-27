@@ -1,5 +1,6 @@
 
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page import="com.hsp.model.*" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -81,9 +82,13 @@
 
 
 <table class="newtable" cellspacing="10px">
+<%
+List<Activity> activities = new QueryAllAction().queryAll();
+for (Activity act : activities) {
+%>
 <tr>
-<td colspan="3" class="newtabletitle"  >这是一个很长很很长长的标题，必须得写满20字</td>
-<td class="time" >2014.5.14 15:23</td>
+<td colspan="3" class="newtabletitle"  ><%= act.getActivityName() %></td>
+<td class="time" ><%= act.getFormatStartTime() %></td>
 </tr>
 <tr>
 <td colspan="4" class="newtabletd" ><b>活动摘要：</b></td>
@@ -91,13 +96,17 @@
 <tr>
 <td  class="newtabletd" >赞：</td>
 <td  class="newtabletd" >参加人数：</td>
-<td  class="newtabletd" ></td>
+<td  class="newtabletd" ><%= act.getMaxNumber() %></td>
 <td  class="newtabletd" id="showdetails"> 活动详情...</td>
 </tr>
 
 <tr>
 <td colspan="4" class="newtabletd" ><hr /></td>
 </tr>
+<%
+}
+%>
+
 
 </table>
 
@@ -142,7 +151,7 @@
 <option value="sport">激情运动场</option>
 <option value="book">我要换书</option>
 <option value="game">逸游北洋</option>
-<option value="learning">学霸去哪儿了</option>
+<option value="study">学霸去哪儿了</option>
 <option value="other">杂七杂八</option>
 </select>
 </td>

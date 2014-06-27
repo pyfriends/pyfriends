@@ -1,6 +1,7 @@
 package com.hsp.model;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Activity implements Serializable{
@@ -79,6 +80,20 @@ public class Activity implements Serializable{
 
   public Date getStarttime() {
     return starttime;
+  }
+  
+  public String getFormatStartTime() {
+    Calendar cal = Calendar.getInstance();
+    cal.setTime(starttime);
+    String template = "%d.%d.%d %02d:%02d";
+    return String.format(
+      template,
+      cal.get(Calendar.YEAR),
+      cal.get(Calendar.MONTH),
+      cal.get(Calendar.DATE),
+      cal.get(Calendar.HOUR_OF_DAY),
+      cal.get(Calendar.MINUTE)
+    );
   }
 
   public void setStarttime(Date starttime) {
