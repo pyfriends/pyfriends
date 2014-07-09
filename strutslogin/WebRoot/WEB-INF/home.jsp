@@ -12,6 +12,7 @@
 <link href="/strutslogin/css/style.css" type="text/css" rel="stylesheet"/>
 <script src="/strutslogin/js/jquery-1.11.1.js" language="javascript"></script>
 <script src="/strutslogin/js/main.js" language="javascript"></script>
+<script src="/strutslogin/js/jquery-ui-1.10.4.custom.js" language="javascript"></script>
 
 
 </head>

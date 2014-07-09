@@ -1,5 +1,24 @@
 @charset "utf-8";
 /* CSS Document */
+
+body {
+font-family:"微软雅黑",Helvetica, sans-serif;
+font-size:12px;
+color:#000;
+text-align:center;
+}
+* {
+margin:0;
+padding:0;
+}
+a {
+font-family:"微软雅黑",Helvetica, sans-serif;
+color:#1E7ACE;
+text-decoration:none;
+}
+
+input,select{vertical-align:middle;} 
+
 #all{
 
 	z-index:0;
@@ -16,6 +35,38 @@
 .main{
 	margin:0 auto;
 	width:950px;}
+	
+#personal{
+	width:100%;
+	positon:fixed;
+	top:0;
+	height:40px;
+	padding:0px;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	opacity:0.7;
+	background: #000;
+	position:absolute;
+}
+
+
+#personal ul{text-align:right;
+	padding:10px;
+	margin-bottom:5px;
+	z-index:0;
+	}
+
+#personal ul li{	text-align:right;
+	padding:3px;
+
+	color:#FFF;
+	width:50px;
+	display:inline;
+	font-size:15px;
+	filter:alpha(opacity=100);
+	-moz-opacity:1;
+	opacity:1;
+}
 
 .leftcom{
 	float:left;
@@ -30,7 +81,7 @@
 	color:#FFF;
 	margin-top:40px;
 	width:200px;
-	height:700px;
+	height:500px;
 	text-align:left;
 	background-color:#06C;
 	padding-top:20px;
@@ -40,11 +91,12 @@
 .navilist{
 	margin-top:20px;
 	list-style-type:disc;	
+	margin-left:45px;
 }
 .navitext{
 	font-size:22px;
 	font-weight:100px;
-	margin-left:10px;
+	margin-left:15px;
 }
 
 .notice{
@@ -84,8 +136,8 @@
 .newtable{
 	text-align:center;
 	width:600px;
-	margin-left:20px;
-	margin-top:20px;
+	margin-left:10px;
+	margin-top:10px;
 	
 	
 	}
@@ -122,6 +174,9 @@
 		  background-color:#06C;
 		  margin-top:0px;
 }
+
+
+
 
 
 
@@ -164,7 +219,7 @@
 	cursor:pointer;}
 	
 #addnew{
-	width:600px;
+	width:550px;
 	background-color:#FFF;
 	position:absolute;
 	left:50%;
@@ -173,7 +228,13 @@
 	border:solid;
 	border-color:#06F;
 	display:none;
+	padding-bottom:50px;
+
 	}
+	
+#addnewhead:hover{cursor:move}
+#detailshead:hover{cursor:move}
+#participatehead:hover{cursor:move}
 
 #details{
 	width:650px;
@@ -210,24 +271,99 @@
 	margin-top:30px;
 	width:600px;
 	padding-bottom:50px;}
-.participatetable{
+#participateform{
 	margin-left:30px;
 	margin-top:30px;
 	width:600px;
-	padding-bottom:50px;}
-	
-.ptabletext{font-family:"微软雅黑";
-	font-size:19px;
-	text-align:right;
-	width:150px;
+	padding-bottom:50px;
 	}
 	
+	
+#participateform_input{
+		text-align:left;
+		
+}
+	
+#participateform_label{
+	text-align:right;
+	float:left;
+}
+	
+#participateform_label div{font-family:"微软雅黑";
+	font-size:16px;
+	text-align:right;
+	width:150px;
+	padding-top:10px;
+	
+	}
+#participateform_input div{
+	
+		padding-top:10px;
+		font-size:16px;
+		text-align:left;
+	
+}
+	
+	
+	
+#addnewform{
+	margin-left:30px;
+	margin-top:30px;
+	width:600px;
+	}
+	
+#addnewform_label{
+	text-align:right;
+	float:left;
+}
+
+#addnewform_input{
+		text-align:left;
+		
+}
+	
+	
+#addnewform_label div{font-family:"微软雅黑";
+	font-size:16px;
+	text-align:right;
+	width:130px;
+	padding-top:10px;
+	height:20px;
+	
+	}
+#addnewform_input div{
+		font-size:16px;
+		padding-top:10px;
+		height:20px;
+
+	
+}
+
+#addnewform_input div select{
+	height:20px;
+	border:none;
+	font-size:14px;
+	font-family:"微软雅黑";
+	border:solid;
+	border-color:#06F;
+	border-width:1px;
+	margin-top:0px;
+
+}
+#addnewform_input div select:hover{border-color:#C03;}
+
+
+.newbutton{
+	margin-top:20px;
+}
+
+
 .detailstabletd{
 	text-align:left;
 	width:150px;
 	font-family:"微软雅黑";
 	vertical-align:top;
-	font-size:18px;
+	font-size:16px;
 	color:#000;
 
 	}
@@ -260,7 +396,10 @@
 	height:20px;
 	border-color:#06F;
 	border-width:1px;
+	padding-left:3px;
+	font-size:14px;
 	font-family:"微软雅黑";
+
 	}
 .tableinput:hover{ border-color:#C03;}
 	
@@ -268,15 +407,16 @@
 	top:10px;
 	right:10px;}
 .closebutton:hover{background-color:#09F;
+	cursor:pointer;
 }
 
 .buttonblue{
-	width:200px;
-	height:40px;
+	width:150px;
+	height:30px;
 	background-color:#06F;
 	border:none;
 	font-family:"微软雅黑";
-	font-size:24px;
+	font-size:20px;
 	text-align:center;
 	border-radius:10px;
 	color:#FFF;
@@ -285,13 +425,13 @@
 cursor:pointer;}
 
 .buttonred{
-	width:200px;
-	height:40px;
+	width:150px;
+	height:30px;
 	background-color:#900;
 	border:none;
 	text-align:center;
 	font-family:"微软雅黑";
-	font-size:24px;
+	font-size:20px;
 	border-radius:10px;
 	color:#FFF;
 	vertical-align:central;}
@@ -299,8 +439,11 @@ cursor:pointer;}
 cursor:pointer;}
 
 textarea{	border:solid;
+	font-size:14px;
+	font-family:"微软雅黑";
 	border-width:1px;
-	border-color:#06F;}
+	border-color:#06F;
+	margin-top:20px;}
 	textarea:hover{border-color:#C03;}
 #mask{
 	filter:alpha(opacity=50);
@@ -311,4 +454,8 @@ textarea{	border:solid;
 	z-index:1;
 	margin:0 auto;
 	display:none;
+	width:100%;
+	height:100%;
+	bottom:0px;
+	top:0px;
 	}
